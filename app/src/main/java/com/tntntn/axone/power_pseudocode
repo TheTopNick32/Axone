@@ -1,0 +1,33 @@
+:a
+if str[^ - 1]==")":
+	counter=0
+	go from ^ to 0:
+		if counter>0:
+			if currchar==")": counter++
+			elif currchar=="(": counter--;
+		elif currchar in [+, *, -, (]:
+			pow_start=currchar.index+1
+			break
+		elif currchar=="/":
+			goto a(NODIVISIONCHECK)
+else: go from ^ to 0:
+	if currchar in [+, *, -, (]:
+		pow_start=currchar.index+1
+		break
+	elif currchar=="/":
+		goto a(NODIVISIONCHECK)
+if str[^ + 1].isDigit:
+	pow_end=^ + 1
+elif str[^ + 1]=={:
+	counter=1
+	go from ^ to end:
+		if currchar=="{": counter++
+		elif currchar=="}": counter--;
+		if counter==0:
+			break
+	pow_end=currchar.index
+else:
+	go from ^ to end:
+		if currchar in [+, *, -, /, (, )]:
+			powend = currchar.index - 1
+			break

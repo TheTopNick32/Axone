@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:context=".LaTeXActivity">
+
+    <WebView
+        android:id="@+id/mathWebView"
+        android:layout_width="match_parent"
+        android:layout_height="242dp"></WebView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.333333"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/zoomText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.278"
+                android:text="@string/zoom"
+                android:textAlignment="center" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.333333"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/dxText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.333333"
+                android:text="@string/x"
+                android:textAlignment="center" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.333333"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/dyText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.333333"
+                android:text="@string/y"
+                android:textAlignment="center" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/zoomInput"
+            android:layout_width="wrap_content"
+            android:layout_height="44dp"
+            android:layout_weight="0.333333"
+            android:ems="10"
+            android:inputType="text"
+            android:text="1"
+            android:textAlignment="center" />
+
+        <EditText
+            android:id="@+id/dxInput"
+            android:layout_width="wrap_content"
+            android:layout_height="44dp"
+            android:layout_weight="0.333333"
+            android:ems="10"
+            android:inputType="text"
+            android:text="0"
+            android:textAlignment="center" />
+
+        <EditText
+            android:id="@+id/dyInput"
+            android:layout_width="wrap_content"
+            android:layout_height="44dp"
+            android:layout_weight="0.333333"
+            android:ems="10"
+            android:inputType="text"
+            android:text="0"
+            android:textAlignment="center" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/colorText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:text="@string/color"
+                android:textAlignment="center" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/thickText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:text="@string/thick"
+                android:textAlignment="center" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/colorInput"
+            android:layout_width="wrap_content"
+            android:layout_height="44dp"
+            android:layout_weight="0.5"
+            android:ems="10"
+            android:inputType="text"
+            android:text="#2fe91f"
+            android:textAlignment="center" />
+
+        <EditText
+            android:id="@+id/thickInput"
+            android:layout_width="wrap_content"
+            android:layout_height="44dp"
+            android:layout_weight="0.5"
+            android:ems="10"
+            android:inputType="text"
+            android:text="5"
+            android:textAlignment="center" />
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/editLatexText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:autofillHints=""
+        android:ems="10"
+        android:inputType="textMultiLine"
+        android:text="" />
+
+</LinearLayout>
